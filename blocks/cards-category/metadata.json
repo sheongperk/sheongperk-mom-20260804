@@ -1,0 +1,37 @@
+{
+  "variantName": "cards-category",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-08-04T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.mom.gov.sg/",
+    "originPage": "MOM homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "category-navigation",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "icon image + title + description + link",
+    "buttonCount": 0,
+    "imageCount": 4
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "top-level category / section navigation on a dark band",
+      "icon-led feature grids with title and description"
+    ],
+    "notSuitableFor": [
+      "image-forward promotional banners",
+      "compact icon-only link rows"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-04T00:00:00.000Z"
+  }
+}

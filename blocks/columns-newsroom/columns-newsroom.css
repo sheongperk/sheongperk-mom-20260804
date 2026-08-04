@@ -1,0 +1,103 @@
+/* Block: columns-newsroom — MOM homepage newsroom columns.
+ * Values extracted from source computed styles (see migration-work/columns-newsroom-extracted.css) */
+
+/* Mobile-first: stack columns */
+.columns-newsroom > div {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.columns-newsroom > div > div {
+  min-width: 0;
+}
+
+/* Section heading with blue underline (source: span.text border-bottom 2px #006eab) */
+.columns-newsroom h2 {
+  margin: 0 0 12px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #006eab;
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 31.2px;
+  letter-spacing: -0.5px;
+  color: var(--text-color);
+}
+
+/* Date / time line — first paragraph after the heading */
+.columns-newsroom h2 + p {
+  margin: 0 0 4px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21px;
+  color: var(--text-muted-color);
+}
+
+/* Linked item title */
+.columns-newsroom h3 {
+  margin: 0 0 5px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--text-color);
+}
+
+.columns-newsroom h3 a:any-link {
+  color: var(--link-color);
+  font-weight: 400;
+}
+
+/* Optional summary paragraph (paragraph following the title) */
+.columns-newsroom h3 + p {
+  margin: 0 0 16px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--text-color);
+}
+
+/* View All link — EDS auto-decorates the standalone <a> into a.button.
+   Reset it back to a plain inline link (source: 16px / 600 / link blue). */
+.columns-newsroom .button-container {
+  margin: 16px 0 0;
+}
+
+.columns-newsroom a.button:any-link {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  color: var(--link-color);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+  white-space: normal;
+}
+
+.columns-newsroom a.button:any-link::after {
+  content: " →";
+  white-space: nowrap;
+}
+
+.columns-newsroom a.button:hover,
+.columns-newsroom a.button:focus {
+  background-color: transparent;
+  color: var(--link-hover-color);
+  text-decoration: none;
+}
+
+/* Desktop: three equal columns */
+@media (width >= 900px) {
+  .columns-newsroom > div {
+    flex-direction: row;
+    gap: 30px;
+    align-items: start;
+  }
+
+  .columns-newsroom > div > div {
+    flex: 1;
+  }
+}

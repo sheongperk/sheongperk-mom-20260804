@@ -1,0 +1,35 @@
+/*
+ * brand.css — MOM.gov.sg design tokens
+ * Extracted from https://www.mom.gov.sg/
+ */
+:root {
+  /* fonts */
+  --heading-font-family: "Open Sans", lato, arial, sans-serif;
+  --body-font-family: "Open Sans", lato, arial, sans-serif;
+
+  /* base colors */
+  --background-color: #fff;
+  --text-color: #0c0d0d;
+  --text-muted-color: #6a6a6a;
+  --link-color: #2563cc;
+  --link-hover-color: #23527c;
+
+  /* brand palette */
+  --brand-blue: #005787;
+  --highlight-blue: #e2f1fe;
+  --tab-active-blue: #d7edfe;
+  --grey: #f6f6f6;
+
+  /* spacing */
+  --section-padding: 24px;
+  --content-max-width: 960px;
+  --nav-height: auto;
+
+  /* heading sizes (desktop) */
+  --heading-size-xxl: 38px;
+  --heading-size-xl: 26px;
+  --heading-size-l: 22px;
+  --heading-size-m: 18px;
+  --heading-size-s: 16px;
+  --heading-size-xs: 14px;
+}

@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "projectType": "xwalk"
+  },
+  "templates": [
+    {
+      "name": "homepage",
+      "urls": [
+        "https://www.mom.gov.sg/"
+      ],
+      "representativeUrl": "https://www.mom.gov.sg/",
+      "coverageGaps": [],
+      "description": "Ministry of Manpower homepage — masthead search, primary navigation quick-links, eServices quick guide tabs, highlights/spotlight banners, and latest announcements/press releases/speeches listing.",
+      "blocks": [
+        {
+          "name": "tabs-highlights",
+          "instances": [
+            "#MainContent > div.ui-module.module-eservices div.quickGuideDiv"
+          ]
+        },
+        {
+          "name": "cards-spotlight",
+          "instances": [
+            "#maincontent_0_homesmallspotlight_0_DivCode a.ui-banner"
+          ]
+        },
+        {
+          "name": "columns-newsroom",
+          "instances": [
+            "#maincontent_0_homelatest_0_DivCode > div.row.content-highlights > section.columns"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Masthead welcome + search",
+          "selector": "#mainform > div.mom-masthead.searchbar-container",
+          "style": "highlight",
+          "blocks": [
+            "search"
+          ],
+          "defaultContent": [
+            "#mainform > div.mom-masthead.searchbar-container h1"
+          ]
+        },
+        {
+          "id": "section-3",
+          "name": "Highlights / eServices quick-guide tabs",
+          "selector": "#MainContent > div.ui-module.module-eservices",
+          "style": "highlight",
+          "blocks": [
+            "tabs-highlights"
+          ],
+          "defaultContent": [
+            "#MainContent > div.ui-module.module-eservices .quickGuideDiv > h2.section-title",
+            "#MainContent > div.ui-module.module-eservices .quickGuideDiv > p"
+          ]
+        },
+        {
+          "id": "section-4",
+          "name": "Spotlight banners",
+          "selector": "#maincontent_0_homesmallspotlight_0_DivCode",
+          "style": "grey",
+          "blocks": [
+            "cards-spotlight"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-5",
+          "name": "Latest Announcements / Press releases / Speeches",
+          "selector": "#maincontent_0_homelatest_0_DivCode",
+          "style": "grey",
+          "blocks": [
+            "columns-newsroom"
+          ],
+          "defaultContent": []
+        }
+      ]
+    }
+  ]
+}

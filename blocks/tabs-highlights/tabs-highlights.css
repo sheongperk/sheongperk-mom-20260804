@@ -1,0 +1,264 @@
+/* stylelint-disable no-descending-specificity */
+
+/* ==========================================================================
+   tabs-highlights — MOM "Highlights" module (What's new / Popular eServices)
+   Values extracted from source computed styles (mom.gov.sg quickGuideDiv).
+   Decorated DOM:
+     .tabs-highlights.block
+       > .tabs-highlights-list[role=tablist]  > button.tabs-highlights-tab > p
+       > .tabs-highlights-panel[role=tabpanel] > div > .tabs-highlights-content
+   ========================================================================== */
+
+/* --- Tab list -------------------------------------------------------------
+   Source: brand-blue (#005787) bar, rounded top corners, equal-width tabs. */
+.tabs-highlights .tabs-highlights-list {
+  display: flex;
+  margin: 0;
+  border-radius: 6px 6px 0 0;
+  background-color: var(--brand-blue);
+  overflow: hidden;
+}
+
+.tabs-highlights .tabs-highlights-tab {
+  flex: 1 1 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  padding: 10px 15px;
+  background-color: transparent;
+  color: #fff;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  font-weight: 600;
+  line-height: 1.43;
+  text-align: center;
+  white-space: normal;
+  text-overflow: clip;
+  overflow: visible;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.tabs-highlights .tabs-highlights-tab p {
+  margin: 0;
+}
+
+.tabs-highlights .tabs-highlights-tab:hover,
+.tabs-highlights .tabs-highlights-tab:focus {
+  background-color: rgb(255 255 255 / 12%);
+}
+
+/* active tab: light-blue fill (#d7edfe), dark text */
+.tabs-highlights .tabs-highlights-tab[aria-selected='true'] {
+  background-color: var(--tab-active-blue);
+  color: #333;
+  cursor: default;
+}
+
+.tabs-highlights .tabs-highlights-tab[aria-selected='true']:hover,
+.tabs-highlights .tabs-highlights-tab[aria-selected='true']:focus {
+  background-color: var(--tab-active-blue);
+}
+
+/* first / last tab round with the bar */
+.tabs-highlights .tabs-highlights-tab:first-child[aria-selected='true'] {
+  border-radius: 6px 0 0;
+}
+
+.tabs-highlights .tabs-highlights-tab:last-child[aria-selected='true'] {
+  border-radius: 0 6px 0 0;
+}
+
+/* --- Tab panel ------------------------------------------------------------
+   Source: light-blue fill (#d7edfe), rounded bottom, padding 32px 24px 18px. */
+.tabs-highlights .tabs-highlights-panel {
+  margin: 0;
+  border-radius: 0 0 6px 6px;
+  padding: 32px 24px 18px;
+  background-color: var(--tab-active-blue);
+  color: var(--text-color);
+}
+
+.tabs-highlights .tabs-highlights-panel[aria-hidden='true'] {
+  display: none;
+}
+
+/* the single content cell EDS leaves inside the panel */
+.tabs-highlights .tabs-highlights-panel > div {
+  margin: 0;
+}
+
+.tabs-highlights .tabs-highlights-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* --- "What's new": promo cards + useful-links box side by side ------------ */
+.tabs-highlights .tabs-highlights-promo {
+  margin: 0;
+}
+
+.tabs-highlights .tabs-highlights-promo p {
+  margin: 0;
+}
+
+.tabs-highlights .tabs-highlights-promo a {
+  display: block;
+}
+
+.tabs-highlights .tabs-highlights-promo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* promo title link sits under the image */
+.tabs-highlights .tabs-highlights-promo p:last-child {
+  margin-top: 12px;
+}
+
+.tabs-highlights .tabs-highlights-promo p:last-child a {
+  display: inline;
+  color: var(--link-color);
+  font-size: var(--body-font-size-m);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.tabs-highlights .tabs-highlights-promo p:last-child a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+/* --- Useful-links box ----------------------------------------------------- */
+.tabs-highlights .tabs-highlights-useful {
+  border: 1px solid #c7c7c7;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+.tabs-highlights .tabs-highlights-useful > p {
+  margin: 10px 15px;
+  color: var(--text-color);
+  font-size: var(--body-font-size-m);
+  font-weight: 400;
+}
+
+.tabs-highlights .tabs-highlights-useful > p strong {
+  font-weight: 700;
+}
+
+/* --- Arrow lists (useful links + eservice columns) ------------------------ */
+.tabs-highlights .tabs-highlights-useful ul,
+.tabs-highlights .tabs-highlights-columns ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--body-font-size-s);
+  line-height: 1.5;
+}
+
+.tabs-highlights .tabs-highlights-useful ul {
+  margin: 0 20px 0 25px;
+  padding: 0 0 24px;
+}
+
+.tabs-highlights .tabs-highlights-useful li,
+.tabs-highlights .tabs-highlights-columns li {
+  position: relative;
+  margin: 0 0 12px;
+  padding: 0 0 0 25px;
+  list-style: none;
+}
+
+/* chevron/arrow bullet — replicates the Linearicons arrow (color #98c1d7) */
+.tabs-highlights .tabs-highlights-useful li::before,
+.tabs-highlights .tabs-highlights-columns li::before {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 0.5em;
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid #98c1d7;
+  border-right: 2px solid #98c1d7;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.tabs-highlights .tabs-highlights-useful li a,
+.tabs-highlights .tabs-highlights-columns li a {
+  color: var(--link-color);
+  font-size: var(--body-font-size-s);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.tabs-highlights .tabs-highlights-useful li a:hover,
+.tabs-highlights .tabs-highlights-columns li a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+/* --- "Popular eServices": heading + multi-column arrow lists -------------- */
+.tabs-highlights .tabs-highlights-panel h3 {
+  margin: 0 0 12px;
+  color: var(--text-color);
+  font-size: var(--heading-font-size-xl);
+  font-weight: 300;
+  letter-spacing: -0.5px;
+}
+
+.tabs-highlights .tabs-highlights-columns {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* "View all" trailing link */
+.tabs-highlights .tabs-highlights-content > p {
+  margin: 12px 0 0;
+}
+
+.tabs-highlights .tabs-highlights-content > p a {
+  color: var(--link-color);
+  font-size: var(--body-font-size-m);
+  font-weight: 600;
+}
+
+.tabs-highlights .tabs-highlights-content > p a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+/* --- Desktop layout ------------------------------------------------------- */
+@media (width >= 900px) {
+  /* What's new: two promo cards + useful box in a 3-up row */
+  .tabs-highlights .tabs-highlights-content:has(.tabs-highlights-promo) {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 30px;
+  }
+
+  .tabs-highlights .tabs-highlights-promo {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .tabs-highlights .tabs-highlights-useful {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  /* eServices columns: 3 across */
+  .tabs-highlights .tabs-highlights-columns {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .tabs-highlights .tabs-highlights-columns ul {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+}

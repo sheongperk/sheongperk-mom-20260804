@@ -1,0 +1,10 @@
+{
+  "type": "xwalk",
+  "sites": {
+    "sheongperk-mom-20260804": {
+      "previewOrg": "sheongperk",
+      "previewSite": "sheongperk-mom-20260804",
+      "libraryUrl": "https://main--sta-xwalk-boilerplate--aemysites.aem.page/tools/sidekick/library.json"
+    }
+  }
+}

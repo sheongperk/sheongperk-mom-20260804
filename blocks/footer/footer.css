@@ -1,20 +1,135 @@
+/* MOM.gov.sg footer — dark-navy "Information and Services" band (#002b43)
+ * over a darker legal bar (#181c2f), white text throughout.
+ */
+
+/* stylelint-disable no-descending-specificity */
+
 footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+  font-family: var(--body-font-family);
+  font-size: 14px;
 }
 
-footer .footer > div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+footer .footer-inner ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-footer .footer p {
+footer .footer-inner a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer .footer-inner a:hover {
+  text-decoration: underline;
+}
+
+footer .footer-inner p {
   margin: 0;
 }
 
-@media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
+/* ---- Information and Services ---- */
+.footer-info {
+  background-color: #002b43;
+  color: #fff;
+}
+
+.footer-info-inner {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.footer-info h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 16px;
+}
+
+.footer-info h2:nth-of-type(2) {
+  margin-top: 28px;
+}
+
+.footer-info > .footer-info-inner > p:first-of-type img {
+  height: 44px;
+  width: auto;
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+}
+
+.footer-links a {
+  font-size: 15px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgb(255 255 255 / 12%);
+  transition: background-color 0.15s ease;
+}
+
+.footer-social a:hover {
+  background-color: rgb(255 255 255 / 25%);
+}
+
+/* ---- Legal bar ---- */
+.footer-legal {
+  background-color: #181c2f;
+  color: #fff;
+}
+
+.footer-legal-inner {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 16px 24px;
+}
+
+.footer-legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin-bottom: 8px;
+}
+
+.footer-legal-links a {
+  font-size: 13px;
+}
+
+.footer-legal p {
+  font-size: 12px;
+  color: rgb(255 255 255 / 70%);
+}
+
+/* ---- Mobile ---- */
+@media (width < 900px) {
+  .footer-info-inner,
+  .footer-legal-inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer-legal-links {
+    flex-direction: column;
+    gap: 10px;
   }
 }

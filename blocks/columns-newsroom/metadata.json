@@ -1,0 +1,37 @@
+{
+  "variantName": "columns-newsroom",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-08-04T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.mom.gov.sg/",
+    "originPage": "MOM homepage",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "grey",
+    "density": "spacious",
+    "purpose": "newsroom-listing",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "3 columns, each heading + dated linked items + 'View All' link",
+    "buttonCount": 3,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "multi-column newsroom / latest-content feeds (announcements, press, speeches)",
+      "side-by-side informational text columns with per-column links"
+    ],
+    "notSuitableFor": [
+      "image-forward promotional layouts",
+      "distinct repeatable card items"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-04T00:00:00.000Z"
+  }
+}

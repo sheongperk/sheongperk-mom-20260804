@@ -1,0 +1,37 @@
+{
+  "variantName": "tabs-highlights",
+  "baseBlock": "tabs",
+  "version": "1.0.0",
+  "created": "2026-08-04T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.mom.gov.sg/",
+    "originPage": "MOM homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "highlight",
+    "density": "spacious",
+    "purpose": "highlights-switcher",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "tab navigation + rich content panels (image cards + link lists)",
+    "buttonCount": 2,
+    "imageCount": 2
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "highlight / featured content tab switchers on a light-accent section",
+      "two-tab 'what's new' vs 'popular' style content panels"
+    ],
+    "notSuitableFor": [
+      "single static content panels",
+      "dark full-bleed hero sections"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-04T00:00:00.000Z"
+  }
+}

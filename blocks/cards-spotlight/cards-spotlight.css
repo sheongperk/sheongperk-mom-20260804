@@ -1,0 +1,96 @@
+/* cards-spotlight — three image banners with caption overlaid on each image.
+   Values extracted from https://www.mom.gov.sg/ spotlight banners:
+   banner 300x210 (aspect 10/7), scrim solid black 50%, caption white 600 16px
+   line-height 1.2, span padding 15px, inter-banner gap 30px. */
+
+.cards-spotlight > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.cards-spotlight > ul > li {
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(51 51 51);
+}
+
+/* full-banner darkening overlay (source ::before radial gradient) */
+.cards-spotlight > ul > li::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-image: radial-gradient(rgb(0 0 0 / 20%) 0, rgb(0 0 0 / 60%) 100%);
+  pointer-events: none;
+}
+
+/* image fills the banner and defines its height (aspect 300/210 = 10/7) */
+.cards-spotlight .cards-spotlight-card-image {
+  line-height: 0;
+}
+
+.cards-spotlight .cards-spotlight-card-image p {
+  margin: 0;
+}
+
+.cards-spotlight > ul > li img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 10 / 7;
+  object-fit: cover;
+}
+
+/* caption band overlaid at the bottom of the banner, over a dark scrim */
+.cards-spotlight .cards-spotlight-card-body {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  margin: 0;
+  padding: 15px;
+  background-color: rgb(0 0 0 / 50%);
+}
+
+.cards-spotlight .cards-spotlight-card-body p {
+  margin: 0;
+}
+
+/* reset EDS button auto-decoration back to a plain caption link */
+.cards-spotlight .cards-spotlight-card-body p.button-container {
+  margin: 0;
+}
+
+.cards-spotlight .cards-spotlight-card-body a.button:any-link {
+  display: inline;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  color: #fff;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: left;
+  white-space: normal;
+}
+
+.cards-spotlight .cards-spotlight-card-body a.button:hover,
+.cards-spotlight .cards-spotlight-card-body a.button:focus {
+  background-color: transparent;
+  color: #fff;
+  text-decoration: underline;
+}
+
+@media (width >= 900px) {
+  .cards-spotlight > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,81 @@
+/* Block: cards-iconlink — secondary quick-links row on the dark-blue band.
+   Values extracted from source computed styles (mom.gov.sg nav.nav-secondary). */
+
+.cards-iconlink > ul {
+  list-style: none;
+  margin: 0;
+  padding: 6px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+
+/* each quick-link: icon + label side-by-side, no card chrome */
+.cards-iconlink > ul > li {
+  border: 0;
+  background: none;
+  display: flex;
+  align-items: center;
+  margin: 0 12px 16px;
+}
+
+.cards-iconlink .cards-iconlink-card-image {
+  margin: 0 8px 0 0;
+  line-height: 0;
+}
+
+.cards-iconlink .cards-iconlink-card-image p {
+  margin: 0;
+  line-height: 0;
+}
+
+/* small icons — source renders ~24px tall, width auto to keep aspect */
+.cards-iconlink .cards-iconlink-card-image img {
+  width: auto;
+  height: 24px;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+
+.cards-iconlink .cards-iconlink-card-body {
+  margin: 0;
+}
+
+.cards-iconlink .cards-iconlink-card-body p,
+.cards-iconlink .cards-iconlink-card-body p.button-container {
+  margin: 0;
+}
+
+/* undo EDS auto-button decoration — source links are plain white text */
+.cards-iconlink .cards-iconlink-card-body a.button:any-link {
+  display: inline;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  background: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  white-space: normal;
+  text-overflow: clip;
+  text-decoration: none;
+}
+
+.cards-iconlink .cards-iconlink-card-body a.button:hover,
+.cards-iconlink .cards-iconlink-card-body a.button:focus {
+  background: none;
+  color: rgb(255 255 255 / 80%);
+  text-decoration: underline;
+}
+
+@media (width >= 900px) {
+  /* wider horizontal spacing on desktop matching source link margins */
+  .cards-iconlink > ul > li {
+    margin: 0 12px 16px;
+  }
+}
