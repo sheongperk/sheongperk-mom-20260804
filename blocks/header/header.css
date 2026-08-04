@@ -5,14 +5,10 @@
 
 /* stylelint-disable no-descending-specificity */
 
-/* sticky header — applied to the <header> landmark so it pins against the
- * body scroll (a sticky .nav-wrapper would only stick within the short header).
- * Override the boilerplate fixed 64px header height so the full 3-band nav
- * (masthead + brand bar + primary nav) is visible and not clipped. */
+/* Override the boilerplate fixed 64px header height so the full 3-band nav
+ * (masthead + brand bar + primary nav) is visible and not clipped. The header
+ * scrolls with the page (non-sticky), matching the original site. */
 body > header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
   height: auto;
 }
 
