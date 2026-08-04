@@ -106,9 +106,15 @@ function buildPrimaryNav(section) {
     const ul = document.createElement('ul');
 
     categoryList.querySelectorAll(':scope > li').forEach((li) => {
-      const trigger = li.querySelector(':scope > a');
-      const desc = li.querySelector(':scope > p');
+      // The category link is a direct <li> > a in the raw fragment, but the EDS
+      // pipeline wraps it as <li> > p > a. Accept either. The description is the
+      // first <p> that has NO link (a plain-text paragraph).
+      const trigger = li.querySelector(':scope > a, :scope > p > a');
+      const desc = Array.from(li.querySelectorAll(':scope > p'))
+        .find((p) => !p.querySelector('a'));
       const panelList = li.querySelector(':scope > ul');
+      if (!trigger) return; // malformed item — skip rather than crash the header
+
       const item = document.createElement('li');
       item.className = 'nav-category';
 
