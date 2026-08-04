@@ -17,6 +17,10 @@ import {
   toCamelCase,
 } from './aem.js';
 
+// Origin of the Document Authoring "nx" experimentation plugins, consumed by
+// scripts/sidekick.js (e.g. `${NX_ORIGIN}/public/plugins/exp/exp.js`).
+export const NX_ORIGIN = 'https://da.live/nx';
+
 /**
  * Builds hero block and prepends to main in a new section.
  * @param {Element} main The container element
